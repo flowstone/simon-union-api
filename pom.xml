@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.xueyao</groupId>
-    <artifactId>simon-pub-api</artifactId>
+    <artifactId>simon-union-api</artifactId>
     <version>0.0.1</version>
     <name>simon-pub-api</name>
     <description>流体石头的便利店</description>
@@ -75,7 +75,7 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--JD联盟的SDK 需要自己下载-->
+        <!--淘宝联盟的SDK 需要自己下载-->
         <dependency>
             <groupId>taobao-sdk-java</groupId>
             <artifactId>taobao-sdk-java</artifactId>

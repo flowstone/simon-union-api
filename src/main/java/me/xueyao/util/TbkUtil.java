@@ -59,11 +59,12 @@ public class TbkUtil {
         req.setNeedPrepay(TbkConstant.needPrepay);
 
         TbkDgMaterialOptionalResponse response = taobaoClient.execute(req);
-        if (!StringUtils.isEmpty(response.getSubCode())) {
+
+        List<TbkDgMaterialOptionalResponse.MapData> resultList = response.getResultList();
+        if (null == resultList || resultList.isEmpty()) {
             return Collections.emptyList();
         }
 
-        List<TbkDgMaterialOptionalResponse.MapData> resultList = response.getResultList();
         log.info("原始数据 = {}", JSONObject.toJSONString(resultList));
         List<GoodResponse> goodResponseList = resultList.stream().map(mapData -> {
             GoodResponse goodResponse = new GoodResponse();

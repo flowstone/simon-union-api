@@ -102,9 +102,11 @@ public class WxWelcomeController {
             goodList = tbkUtil.getGoodList(content);
         } catch (ApiException e) {
             e.printStackTrace();
+            resultMap.put(WxConstant.CONTENT, "商品不存在");
+            return;
         }
         if (goodList.isEmpty() || goodList.size() == 0) {
-            resultMap.put(WxConstant.CONTENT, "");
+            resultMap.put(WxConstant.CONTENT, "商品不存在");
         } else {
             StringBuilder sb = new StringBuilder();
             for (GoodResponse goodResponse : goodList) {
