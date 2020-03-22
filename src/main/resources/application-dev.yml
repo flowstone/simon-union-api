@@ -1,0 +1,26 @@
+server:
+  port: 9999
+
+wx:
+  token: # 微信公众号 token
+  appId: # 微信公众号 appid
+  appSecret: #微信公众号appSecret
+  encodingAESKey: # 暂时没用到
+
+taobao:
+  mama:
+    key: #淘宝联盟 key
+    secret: #淘宝联盟 secret
+    adzoneId: #淘宝联盟 adzoneId
+jd:
+  union:
+    key: #京东联盟 key
+    secret: #京东联盟 secret
+    siteId: #京东联盟 siteId
+
+url:
+  wx:
+    accessTokenUrl: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={APPID}&secret={APPSECRET}
+    createMenu: https://api.weixin.qq.com/cgi-bin/menu/create?access_token={ACCESS_TOKEN}
+  taobao: http://gw.api.tbsandbox.com/router/rest #淘宝联盟 沙箱环境url
+  jd: https://router.jd.com/api #京东联盟 正式环境url

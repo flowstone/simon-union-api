@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1em;
+            font-size: 110%;
+            line-height: 1.4;
+            overflow: hidden;
+        }
+
+        .container a {
+            font-style: normal;
+            color: #0089e0;
+            text-decoration: none;
+        }
+
+        .panel {
+            float: left;
+        }
+
+        .panda {
+            position: relative;
+            width: 333px;
+            height: 293px;
+            margin-right: 1em;
+            overflow: hidden;
+        }
+
+        .panda img {
+            position: absolute;
+            top: 53px;
+            left: 49px;
+            width: 240px;
+            height: 240px;
+        }
+
+        .brief h1 {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .brief p {
+            margin-top: 1em;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding-top: 8em;
+            }
+
+            .brief h1 {
+                padding-top: 4em;
+            }
+        }
+
+        @media (max-width: 333px) {
+            .panda {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+<div class="container">
+    <div class="panel panda"><img th:src="@{/img/404panda.gif}"></div>
+    <div class="panel brief">
+        <h1>这个地方不安全，<br>我们还是回去吧~</h1>
+        <p>试试<a href="http://www.xueyao.me/">点这里回家</a></p>
+    </div>
+</div>
+
+
+</body>
+</html>
